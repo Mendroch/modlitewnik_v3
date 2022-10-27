@@ -1,0 +1,20 @@
+.c-text__text-name {
+    margin: 8px 0 10px 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.c-text-container {
+    padding: 5px 17px;
+    height: calc(100vh - 121px);
+    background-color: var(--white);
+    border-radius: 0 0 8px 8px;
+    font-size: 19px;
+    overflow: scroll;
+}
+
+.c-text {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.2;
+}
