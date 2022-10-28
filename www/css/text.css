@@ -13,8 +13,12 @@
     overflow: scroll;
 }
 
+.is-text--no-category {
+    height: calc(100vh - 84px);
+    border-radius: 8px;
+}
+
 .c-text {
     margin: 8px 0;
-    font-size: 16px;
     line-height: 1.2;
 }

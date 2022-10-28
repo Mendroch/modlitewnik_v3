@@ -6,3 +6,7 @@
     font-size: 19px;
     overflow: scroll;
 }
+
+.is-categories__list {
+    height: calc(100vh - 84px);
+}

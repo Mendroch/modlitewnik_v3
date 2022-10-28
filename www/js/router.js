@@ -1,4 +1,4 @@
-import { createCategories, createTitles, createText } from './createContent.js'
+import { createCategories, createTitles, createText, createSearch } from './createContent.js'
 
 const route = (event) => {
     event = event || window.event
@@ -21,7 +21,7 @@ const createContent = (view) => {
         case 'categories': createCategories(); break
         case 'titles': createTitles(); break
         case 'text': createText(); break
-        case 'search': break
+        case 'search': createSearch(); break
     }
 }
 

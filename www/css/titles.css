@@ -7,6 +7,10 @@
     overflow: scroll;
 }
 
+.is-titles__list {
+    height: calc(100vh - 121px);
+}
+
 .c-text__category-name {
     padding: 7px 17px;
     height: 37px;

@@ -12,8 +12,8 @@ export const getFontSize = () => {
     if (localStorage.getItem('fontSize')) {
         return JSON.parse(localStorage.getItem('fontSize'))
     } else {
-        localStorage.setItem('fontSize', JSON.stringify('16px'))
-        return '16px'
+        localStorage.setItem('fontSize', JSON.stringify('15px'))
+        return '15px'
     }
 }
 
