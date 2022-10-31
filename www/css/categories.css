@@ -1,6 +1,6 @@
 .c-categories__list {
     padding: 5px 17px;
-    height: calc(100vh - 142px);
+    height: calc(100vh - 146px);
     background-color: var(--white);
     border-radius: 8px;
     font-size: 19px;
@@ -8,5 +8,5 @@
 }
 
 .is-categories__list {
-    height: calc(100vh - 84px);
+    height: calc(100vh - 88px);
 }

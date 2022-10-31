@@ -33,7 +33,10 @@ const handleLocation = async () => {
     createContent(path.slice(5))
 }
 
-window.onpopstate = handleLocation
-window.route = route
+const initializeApp = () => {
+    window.onpopstate = handleLocation
+    window.route = route
+    handleLocation()
+}
 
-handleLocation()
+document.addEventListener('DOMContentLoaded', initializeApp())

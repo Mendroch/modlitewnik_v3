@@ -1,5 +1,6 @@
 import { getCategories, getTitles, getText, typeOfContent, getTexts, addZoomListeners } from './app.js'
 import { getFontSize } from './getsetdata.js'
+import { createDOMElem } from './dominteractions.js'
 
 const updateLocation = (view) => {
     let location = document.getElementById('navigationLocation')
@@ -24,11 +25,17 @@ const searchText = () => {
     let list = document.getElementById('titlesList')
     let inputText = input.value
     list.innerHTML = ''
-    texts.forEach(text => {
-        if (text.name.toLowerCase().indexOf(inputText.toLowerCase()) !== -1 || inputText === '') {
-            const listElem = `<a class="c-list__elem" href="/www/text" onclick="route(), setTextName('${text.name}')">${text.name}</a>`
-            list.innerHTML += listElem
+
+    let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()))
+    searchedTexts.forEach(text => {
+        let name = text.name
+        const listElem = createDOMElem('a', 'c-list__elem', name, '/www/text')
+        listElem.onclick = () => {
+            route()
+            setTextName(name)
         }
+    
+        list.appendChild(listElem)
     })
 }
 
@@ -40,11 +47,16 @@ export const createCategories = () => {
     categories.forEach(category => {
         let listElem
         if (category.content && category.content !== '<p>---</p>') {
-            listElem = `<a class="c-list__elem" href="/www/text" onclick="route(), setCategoryId(${category.id})">${category.name}</a>`
+            listElem = createDOMElem('a', 'c-list__elem', category.name, '/www/text')
         } else {
-            listElem = `<a class="c-list__elem" href="/www/titles" onclick="route(), setCategoryId(${category.id})">${category.name}</a>`
+            listElem = createDOMElem('a', 'c-list__elem', category.name, '/www/titles')
         }
-        list.innerHTML += listElem
+
+        listElem.onclick = () => {
+            route()
+            setCategoryId(category.id)
+        }
+        list.appendChild(listElem)
     })
 }
 
@@ -56,8 +68,12 @@ export const createTitles = () => {
 
     categoryName.innerText = titles[1]
     titles[0].forEach(title => {
-        let listElem = `<a class="c-list__elem" href="/www/text" onclick="route(), setTextName('${title.name}')">${title.name}</a>`
-        list.innerHTML += listElem
+        let listElem = createDOMElem('a', 'c-list__elem', title.name, '/www/text')
+        listElem.onclick = () => {
+            route()
+            setTextName(title.name)
+        }
+        list.appendChild(listElem)
     })
 }
 
