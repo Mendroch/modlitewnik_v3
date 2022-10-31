@@ -29,7 +29,7 @@ const searchText = () => {
     let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()))
     searchedTexts.forEach(text => {
         let name = text.name
-        const listElem = createDOMElem('a', 'c-list__elem', name, '/www/text')
+        const listElem = createDOMElem('a', 'c-list__elem', name, '/text')
         listElem.onclick = () => {
             route()
             setTextName(name)
@@ -47,9 +47,9 @@ export const createCategories = () => {
     categories.forEach(category => {
         let listElem
         if (category.content && category.content !== '<p>---</p>') {
-            listElem = createDOMElem('a', 'c-list__elem', category.name, '/www/text')
+            listElem = createDOMElem('a', 'c-list__elem', category.name, '/text')
         } else {
-            listElem = createDOMElem('a', 'c-list__elem', category.name, '/www/titles')
+            listElem = createDOMElem('a', 'c-list__elem', category.name, '/titles')
         }
 
         listElem.onclick = () => {
@@ -68,7 +68,7 @@ export const createTitles = () => {
 
     categoryName.innerText = titles[1]
     titles[0].forEach(title => {
-        let listElem = createDOMElem('a', 'c-list__elem', title.name, '/www/text')
+        let listElem = createDOMElem('a', 'c-list__elem', title.name, '/text')
         listElem.onclick = () => {
             route()
             setTextName(title.name)

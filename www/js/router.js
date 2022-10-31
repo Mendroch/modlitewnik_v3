@@ -8,12 +8,13 @@ const route = (event) => {
 }
 
 const routes = {
-    404: "/www/views/404.html",
-    "/www/": "/www/views/home.html",
-    "/www/categories": "/www/views/categories.html",
-    "/www/titles": "/www/views/titles.html",
-    "/www/text": "/www/views/text.html",
-    "/www/search": "/www/views/search.html",
+    404: "/views/404.html",
+    "/": "/views/home.html",
+    "/index.html": "/views/home.html",
+    "/categories": "/views/categories.html",
+    "/titles": "/views/titles.html",
+    "/text": "/views/text.html",
+    "/search": "/views/search.html",
 }
 
 const createContent = (view) => {
@@ -30,7 +31,7 @@ const handleLocation = async () => {
     const route = routes[path] || routes[404]
     const html = await fetch(route).then((data) => data.text())
     document.getElementById("mainContent").innerHTML = html
-    createContent(path.slice(5))
+    createContent(path.slice(1))
 }
 
 const initializeApp = () => {
