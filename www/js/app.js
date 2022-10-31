@@ -24,6 +24,7 @@ const initializeApp = () => {
     window.setType = setType
     window.setCategoryId = setCategoryId
     window.setTextName = setTextName
+    window.undo = undo
 }
 
 const setType = type => contentType = type
@@ -71,6 +72,11 @@ const getCategoriesAndTexts = () => {
     announcements = getLSData('announcements')
     intentions = getLSData('intentions')
     fontSize = getFontSize()
+
+    // if (localStorage.getItem('songsLastUpdate')) {
+    //     let loadingInfo = document.getElementById('loadingInfo')
+    //     loadingInfo.classList.add('h-display-none')
+    // }
 }
 
 export const getCategories = () => {
@@ -180,6 +186,10 @@ export const addZoomListeners = (container) => {
     container.addEventListener('touchend', e => {
         zoomTouchEnd(e)
     })
+}
+
+const undo = () => {
+    window.history.back()
 }
 
 document.addEventListener('DOMContentLoaded', initializeApp())

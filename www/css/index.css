@@ -38,9 +38,18 @@ a {
 .c-navigation__location {
     margin-top: 12px;
     display: flex;
+    align-items: center;
     color: var(--white);
     font-size: 20px;
     font-weight: 400;
+}
+
+.c-navigation__button {
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    background: center / contain no-repeat url("../img/arrow.png");
+    border: none;
 }
 
 .c-navigation__menu {

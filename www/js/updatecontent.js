@@ -3,13 +3,14 @@ import {getSongsCategoriesRequest, getSongsRequest, getSongsCategoriesUpdateRequ
     getLiturgyCategoriesRequest, getLiturgyRequest, getLiturgyCategoriesUpdateRequest, getLiturgyUpdateRequest,
     getAnnouncementsRequest, getIntentionsRequest
 } from "./requests.js"
+import { getLSData } from './getsetdata.js'
 
-let songsCategoriesLastUpdateLS
-let songsLastUpdateLS
-let prayersCategoriesLastUpdateLS
-let prayersLastUpdateLS
-let liturgyCategoriesLastUpdateLS
-let liturgyLastUpdateLS
+let songsCategoriesLastUpdateLS = getLSData('songsCategoriesLastUpdate')
+let songsLastUpdateLS = getLSData('songsLastUpdate')
+let prayersCategoriesLastUpdateLS = getLSData('prayersCategoriesLastUpdate')
+let prayersLastUpdateLS = getLSData('prayersLastUpdate')
+let liturgyCategoriesLastUpdateLS = getLSData('liturgyCategoriesLastUpdate')
+let liturgyLastUpdateLS = getLSData('liturgyLastUpdate')
 
 // Aktualizuje kategorie pieśni
 export const getSongsCategoriesUpdate = () => {
@@ -94,7 +95,7 @@ export const getPrayersUpdate = () => {
         }).catch((reject) => alert(reject))
     })
 }
-getLiturgyCategoriesUpdateRequest
+
 // Aktualizuje kategorie liturgii
 export const getLiturgyCategoriesUpdate = () => {
     return new Promise((resolve, reject) => {
