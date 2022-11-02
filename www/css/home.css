@@ -43,13 +43,6 @@
     border-radius: 28px;
 }
 
-.c-home__button:last-of-type {
-    margin-bottom: none;
-}
-
-.c-loading-info {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
+.c-home__link:last-of-type {
+    margin-bottom: 0;
 }

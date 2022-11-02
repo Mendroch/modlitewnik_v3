@@ -33,6 +33,7 @@ const setTextName = name => textName = name
 
 // Zaciąganie danych z serwera i ich aktualizacja jeśli jest to możliwe
 function initializeData() {
+    deleteLoadingInfo()
     getCategoriesAndTexts()
     getSongsUpdateRequest.then(() => {
         updateData()
@@ -55,7 +56,8 @@ const updateData = () => {
     .then(getLiturgyUpdate)
     .then(getAnnouncements)
     .then(getIntentions)
-    .then(getCategoriesAndTexts())
+    .then(getCategoriesAndTexts)
+    .then(deleteLoadingInfo)
     .catch(err => {
         alert(err)
     })
@@ -72,11 +74,12 @@ const getCategoriesAndTexts = () => {
     announcements = getLSData('announcements')
     intentions = getLSData('intentions')
     fontSize = getFontSize()
+}
 
-    // if (localStorage.getItem('songsLastUpdate')) {
-    //     let loadingInfo = document.getElementById('loadingInfo')
-    //     loadingInfo.classList.add('h-display-none')
-    // }
+const deleteLoadingInfo = () => {
+    if (localStorage.getItem('intentions')) {
+        document.getElementById('loadingInfo').style.display = 'none'
+    }
 }
 
 export const getCategories = () => {

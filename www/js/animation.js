@@ -15,7 +15,7 @@ export const makeTransition = (showView, undo) => {
         }
 
         if (showView) {
-            if (undo) {
+            if (undo || document.querySelector('.c-home')) {
                 if (document.querySelector('.c-home')) {
                     content.style.animation = 'fadeIn .25s ease-in-out'
                 } else {
