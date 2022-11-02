@@ -1,9 +1,12 @@
 import { createCategories, createTitles, createText, createSearch } from './createContent.js'
+import { makeTransition } from './animation.js'
+let undo = false
 
 const route = (event) => {
     event = event || window.event
     event.preventDefault()
     window.history.pushState({}, "", event.target.href)
+    undo = false
     handleLocation()
 }
 
@@ -27,11 +30,17 @@ const createContent = (view) => {
 }
 
 const handleLocation = async () => {
-    const path = window.location.pathname
-    const route = routes[path] || routes[404]
-    const html = await fetch(route).then((data) => data.text())
-    document.getElementById("mainContent").innerHTML = html
-    createContent(path.slice(1))
+    makeTransition(false, undo)
+    setTimeout(async () => {
+        document.getElementById("mainContent").innerHTML = ''
+        const path = window.location.pathname
+        const route = routes[path] || routes[404]
+        const html = await fetch(route).then((data) => data.text())
+        document.getElementById("mainContent").innerHTML = html
+        createContent(path.slice(1))
+        makeTransition(true, undo)
+        undo = true
+    }, 230)
 }
 
 const initializeApp = () => {

@@ -1,12 +1,12 @@
-<main class="container">
+<main class="container h-transition">
     <div class="c-text__navigation">
         <div class="c-navigation__location">
             <button class="c-navigation__button" onclick="undo()"></button>
             <p>ŚPIEWNIK >&nbsp</p><p id="navigationLocation"></p>
         </div>
-        <a class="c-navigation__menu" href="/" onclick="route()"></a>
+        <a class="c-navigation__menu" href="/" onclick="undoMenu(), route()"></a>
     </div>
-    <div id="categoryName2" class="c-text__category-name"></div>
+    <div id="categoryName2" class="c-text__category-name h-transition"></div>
     <div id="text" class="c-text-container">
     </div>
 </main>
