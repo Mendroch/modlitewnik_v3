@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="prayo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Prayo</name>
-    <description>Modlitewnik</description>
+    <description>Aplikacja dla parafi Rzymskokatolickiej pw.św.ap. Piotra i Pawła w Skoczowie</description>
     <icon src="www/img/ikona.png" />
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Krzysztof Mendroch
+        Krzysztof Mendroch, Optimalit
     </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
