@@ -115,6 +115,27 @@ a {
     border-bottom: none;
 }
 
+.c-no-results {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spanSearch {
+    background-color: var(--tangerine-yellow);
+}
+
+.styled-scrollbars::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb
+{
+    background-color: var(--light-gray)
+}
+
 @keyframes slideLeftIn {
     0% { transform: translate( 100vw ); }
 }

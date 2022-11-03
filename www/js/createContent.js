@@ -18,8 +18,11 @@ const updateLocation = (view) => {
     }
 }
 
-let texts
+const findSpace = (letter) => {
 
+}
+
+let texts
 const searchText = () => {
     let input = document.getElementById('searchInput')
     let list = document.getElementById('titlesList')
@@ -29,7 +32,13 @@ const searchText = () => {
     let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()))
     searchedTexts.forEach(text => {
         let name = text.name
-        const listElem = createDOMElem('a', 'c-list__elem', name, '/text')
+        // ------------------------------------------
+
+        let colorName = name.replace(inputText, `<span class="spanSearch">${inputText}</span>`)
+
+        // ------------------------------------------
+        const listElem = createDOMElem('a', 'c-list__elem', '', '/text')
+        listElem.innerHTML = colorName
         listElem.onclick = () => {
             route()
             setTextName(name)
@@ -37,6 +46,10 @@ const searchText = () => {
     
         list.appendChild(listElem)
     })
+    if (searchedTexts.length == 0) {
+        let noResult = createDOMElem('div', 'c-no-results', 'Brak wyników')
+        list.appendChild(noResult)
+    }
 }
 
 export const createCategories = () => {
