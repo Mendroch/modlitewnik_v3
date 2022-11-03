@@ -1,18 +1,6 @@
-let undoMenuBtn = false
-
 export const makeTransition = (showView, undo) => {
     if (document.querySelector('.h-transition') !== null) {
         let content = document.querySelector('.h-transition')
-
-        if (undoMenuBtn) {
-            if (document.querySelector('.c-home')) {
-                content.style.animation = 'fadeIn .25s ease-in-out'
-                undoMenuBtn = false
-            } else {
-                content.style.animation = 'fadeOut .25s ease-in-out'
-            }
-            return
-        }
 
         if (showView) {
             if (undo || document.querySelector('.c-home')) {
@@ -45,9 +33,3 @@ export const makeTransition = (showView, undo) => {
         }
     }
 }
-
-const undoMenu = () => {
-    undoMenuBtn = true
-}
-
-window.undoMenu = undoMenu
