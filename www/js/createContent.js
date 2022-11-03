@@ -19,7 +19,8 @@ const updateLocation = (view) => {
 }
 
 const findSpace = (letter) => {
-
+    if (letter === ' ') return '&nbsp' 
+    else return '' 
 }
 
 let texts
@@ -34,11 +35,12 @@ const searchText = () => {
         let name = text.name
         // ------------------------------------------
 
+        
         let colorName = name.replace(inputText, `<span class="spanSearch">${inputText}</span>`)
-
+        
         // ------------------------------------------
         const listElem = createDOMElem('a', 'c-list__elem', '', '/text')
-        listElem.innerHTML = colorName
+        listElem.innerHTML = name
         listElem.onclick = () => {
             route()
             setTextName(name)
@@ -110,7 +112,7 @@ export const createText = () => {
             container.innerHTML += `<p class="c-text__text-name">${text[0][0].name}</p>`
         }
     }
-    container.innerHTML += `<p class="c-text">${text[0][0].content}</p>`
+    container.innerHTML += `<div class="c-text">${text[0][0].content}</div>`
 }
 
 export const createSearch = () => {

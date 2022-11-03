@@ -153,7 +153,7 @@ const addEnters = (text) => {
     let keyWords = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota']
     for (let keyWord of keyWords) {
         if (text.content.indexOf(keyWord) !== -1) {
-            text.content = text.content.replaceAll(keyWord, `<br/><br/>${keyWord}`)
+            text.content = text.content.replaceAll(keyWord, `<br/>${keyWord}`)
         }
     }
     return text
