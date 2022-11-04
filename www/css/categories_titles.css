@@ -57,10 +57,9 @@
 .c-list__elem {
     display: flex;
     align-items: center;
-    height: 50px;
-    overflow: scroll;
+    min-height: 50px;
     font-size: 16px;
-    white-space: nowrap;
+    line-height: 1.2;
     border-bottom: 2px solid var(--light-gray);
 }
 

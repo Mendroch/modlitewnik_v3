@@ -41,14 +41,29 @@ a {
 }
 
 .c-loading-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.c-loading-info__div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-loading-info__img {
+    height: 70px;
+    width: 70px;
+    background: url("../img/load.png") center / 70px no-repeat;
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(360deg); }
 }
 
 @keyframes slideLeftIn {

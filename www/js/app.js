@@ -33,7 +33,7 @@ const setTextName = name => textName = name
 
 // Zaciąganie danych z serwera i ich aktualizacja jeśli jest to możliwe
 function initializeData() {
-    deleteLoadingInfo()
+    createLoadingInfo()
     getCategoriesAndTexts()
     getSongsUpdateRequest.then(() => {
         updateData()
@@ -76,9 +76,15 @@ const getCategoriesAndTexts = () => {
     fontSize = getFontSize()
 }
 
+const createLoadingInfo = () => {
+    if (!localStorage.getItem('intentions')) {
+        document.getElementById('loadingInfo').classList.remove('h-display-none')
+    }
+}
+
 const deleteLoadingInfo = () => {
     if (localStorage.getItem('intentions')) {
-        document.getElementById('loadingInfo').style.display = 'none'
+        document.getElementById('loadingInfo').classList.add('h-display-none')
     }
 }
 
