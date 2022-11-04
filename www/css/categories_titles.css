@@ -1,0 +1,116 @@
+.c-text__navigation {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c-navigation__location {
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.c-navigation__button {
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    background: center / contain no-repeat url("../img/arrow.png");
+    border: none;
+}
+
+.c-navigation__menu {
+    margin-top: 12px;
+    height: 24px;
+    width: 24px;
+    background: center / contain no-repeat url("../img/menu.png");
+    border: none;
+}
+
+.c-text__search {
+    margin-bottom: 26px;
+    display: flex;
+    box-shadow: 0px 0px 22px 0px var(--blue-lagoon);
+}
+
+.c-search__input {
+    padding: 10px;
+    height: 32px;
+    width: calc(100% - 32px);
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.c-search__button {
+    margin-top: 13px;
+    height: 32px;
+    width: 32px;
+    background: url("../img/search.png") center / 20px no-repeat var(--tangerine-yellow);
+    border: none;
+    border-radius: 5px;
+}
+
+.c-list__elem {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    overflow: scroll;
+    font-size: 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.c-list__elem:last-of-type {
+    border-bottom: none;
+}
+
+.c-no-results {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-list {
+    position: relative;
+    padding: 5px 17px;
+    height: calc(100vh - 125px);
+    background-color: var(--white);
+    border-radius: 0 0 8px 8px;
+    font-size: 19px;
+    overflow-y: scroll;
+}
+
+.is-categories__list {
+    height: calc(100vh - 88px);
+}
+
+.is-titles__list {
+    height: calc(100vh - 125px);
+}
+
+.c-text__category-name {
+    padding: 7px 17px;
+    height: 37px;
+    border-radius: 8px 8px 0 0;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--blue-lagoon);
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+.styled-scrollbars::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb
+{
+    background-color: var(--light-gray)
+}

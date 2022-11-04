@@ -1,12 +1,12 @@
 .c-text__text-name {
-    margin: 5px 0 10px 0;
+    margin: 3px 0 11px 0;
     font-size: 17px;
     font-weight: 600;
 }
 
 .c-text-container {
-    padding: 10px 17px;
-    height: calc(100vh - 125px);
+    padding: 12px 17px;
+    height: calc(100vh - 117px);
     background-color: var(--white);
     border-radius: 0 0 8px 8px;
     font-size: 19px;
@@ -15,11 +15,6 @@
 }
 
 .is-text--no-category {
-    height: calc(100vh - 88px);
+    height: calc(100vh - 80px);
     border-radius: 8px;
-}
-
-.c-text {
-    margin: 8px 0;
-    line-height: 1.2;
 }

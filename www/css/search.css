@@ -1,0 +1,9 @@
+.c-list--search  {
+    height: calc(100vh - 139px);
+    border-radius: 8px;
+}
+
+.c-search__button--search {
+    margin-top: 0;
+    border-radius: 0 5px 5px 0;
+}

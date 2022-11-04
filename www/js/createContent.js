@@ -18,11 +18,6 @@ const updateLocation = (view) => {
     }
 }
 
-// const findSpace = (letter) => {
-//     if (letter === ' ') return '&nbsp' 
-//     else return '' 
-// }
-
 let texts
 const searchText = () => {
     let input = document.getElementById('searchInput')
@@ -33,14 +28,6 @@ const searchText = () => {
     let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()))
     searchedTexts.forEach(text => {
         let name = text.name
-
-        // if (inputText != '') {
-        //     let index = name.indexOf(inputText)
-        //     colorName = name.replaceAll(inputText, `${findSpace(name[index - 1])}<span class="spanSearch">
-        //     ${inputText}</span>${findSpace(name[index + inputText.length])}${findSpace(name[index + inputText.length - 1])}`)
-        // } else {
-        //     colorName = name
-        // }
 
         const listElem = createDOMElem('a', 'c-list__elem', '', '/text')
         listElem.innerHTML = name
@@ -115,7 +102,7 @@ export const createText = () => {
             container.innerHTML += `<p class="c-text__text-name">${text[0][0].name}</p>`
         }
     }
-    container.innerHTML += `<div class="c-text">${text[0][0].content}</div>`
+    container.innerHTML += `<div>${text[0][0].content}</div>`
 }
 
 export const createSearch = () => {
