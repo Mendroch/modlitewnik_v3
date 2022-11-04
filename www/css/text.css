@@ -6,7 +6,7 @@
 
 .c-text-container {
     padding: 12px 17px;
-    height: calc(100vh - 117px);
+    height: calc(100vh - 116px);
     background-color: var(--white);
     border-radius: 0 0 8px 8px;
     font-size: 19px;
@@ -15,6 +15,6 @@
 }
 
 .is-text--no-category {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 79px);
     border-radius: 8px;
 }

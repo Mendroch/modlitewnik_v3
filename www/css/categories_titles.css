@@ -78,19 +78,11 @@
 .c-list {
     position: relative;
     padding: 5px 17px;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 124px);
     background-color: var(--white);
     border-radius: 0 0 8px 8px;
     font-size: 19px;
     overflow-y: scroll;
-}
-
-.is-categories__list {
-    height: calc(100vh - 88px);
-}
-
-.is-titles__list {
-    height: calc(100vh - 125px);
 }
 
 .c-text__category-name {
@@ -103,6 +95,10 @@
     background-color: var(--blue-lagoon);
     overflow: scroll;
     white-space: nowrap;
+}
+
+.is-liturgy__list {
+    height: calc(100vh - 117px);
 }
 
 .styled-scrollbars::-webkit-scrollbar

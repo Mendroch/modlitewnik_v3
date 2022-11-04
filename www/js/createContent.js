@@ -7,14 +7,10 @@ const updateLocation = (view) => {
     let content = typeOfContent()
     location.innerText = content
     if (content === 'Liturgia' && view) {
-        let input = document.getElementById('searchInputDiv')
-        input.classList.add('h-display-none')
+        let searchButton = document.getElementById('searchButton')
+        searchButton.classList.add('h-display-none')
         let list = document.getElementById(view)
-        if (view === 'categoriesList') {
-            list.classList.add('is-categories__list')
-        } else {
-            list.classList.add('is-titles__list')
-        }
+        list.classList.add('is-liturgy__list')
     }
 }
 
