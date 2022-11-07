@@ -1,0 +1,12 @@
+{
+  "android": {
+    "release": {
+      "keystore": "parafiaskoczow.keystore",
+      "storePassword": "9ORxCak9Ylep7u8jGkTm",
+      "alias": "parafiaskoczow",
+      "password" : "9ORxCak9Ylep7u8jGkTm",
+      "keystoreType": "jks",
+      "packageType": "bundle"
+    }
+  }
+}
