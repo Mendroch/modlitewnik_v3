@@ -26,8 +26,7 @@ strong {
 }
 
 .container {
-    margin: 0 auto;
-    width: 92vw;
+    margin: 0 15px;
 }
 
 .h-display-none {
