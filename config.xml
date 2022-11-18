@@ -10,7 +10,7 @@
     <platform name="android">
         <resource-file src="res/android/style.xml" target="app/src/main/res/values/style.xml"/>
         <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
-            <activity style:theme="@style/Theme.Transparent"></activity>
+            <activity android:theme="@style/Theme.Transparent"></activity>
         </edit-config>
         <splash src="res/screen/android/splashscreen.png"/>
         
