@@ -13,11 +13,15 @@
   "author": "Krzysztof Mendroch, Optimalit",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^11.0.0"
+    "cordova-android": "^11.0.0",
+    "cordova-plugin-splashscreen": "^6.0.1"
   },
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
   }
 }

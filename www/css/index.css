@@ -3,7 +3,7 @@
 }
 
 body {
-    height: 100vh;
+    height: calc(100vh);
     color: var(--black);
     background: linear-gradient(180deg, var(--bateau) 0%, var(--pottery-blue) 100%);
     font-family: 'Fira Sans', sans-serif;
