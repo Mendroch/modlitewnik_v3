@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="pl.optimalit.parafiaskoczow" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="pl.optimalit.parafiaskoczow" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Parafia Skoczów</name>
     <description>Aplikacja dla parafii Rzymskokatolickiej pw.św.ap. Piotra i Pawła w Skoczowie</description>
     <icon src="www/img/ikona.png" />
-    <author email="krzysztof.mendroch@optimalit.pl">
+    <author email="kontakt@optimalit.pl">
         Krzysztof Mendroch, OptimalIT
     </author>
     <content src="index.html" />
     <platform name="android">
-        <resource-file src="res/android/style.xml" target="app/src/main/res/values/style.xml"/>
+        <resource-file src="res/android/styles.xml" target="app/src/main/res/values/styles.xml"/>
         <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
-            <activity theme="@style/Theme.Transparent"></activity>
+            <activity android:theme="@style/Theme.Transparent"></activity>
         </edit-config>
         <splash src="res/screen/android/splashscreen.png"/>
 
