@@ -1,102 +1,124 @@
-*, *::after, *::before {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
-    height: calc(100vh);
-    color: var(--black);
-    background: linear-gradient(180deg, var(--bateau) 0%, var(--pottery-blue) 100%);
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  height: 100vh;
+  color: var(--black);
+  background: linear-gradient(
+    180deg,
+    var(--bateau) 0%,
+    var(--pottery-blue) 100%
+  );
+  font-family: "Fira Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
-h1 { font-size: 24px; }
+h1 {
+  font-size: 24px;
+}
 
-h2 { font-size: 20px; }
+h2 {
+  font-size: 20px;
+}
 
-h3 { font-size: 18px; }
+h3 {
+  font-size: 18px;
+}
 
 li {
-    margin-top: 14px;
+  margin-top: 14px;
 }
 
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .container {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .h-display-none {
-    display: none;
+  display: none;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0)
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .c-loading-info {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .c-loading-info__div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .c-loading-info__img {
-    height: 70px;
-    width: 70px;
-    background: url("../img/load.png") center / 70px no-repeat;
-    animation: rotate 1.5s linear infinite;
+  height: 70px;
+  width: 70px;
+  background: url("../img/load.png") center / 70px no-repeat;
+  animation: rotate 1.5s linear infinite;
 }
 
 @keyframes rotate {
-    0% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes slideLeftIn {
-    0% { transform: translate( 100vw ); }
+  0% {
+    transform: translate(100vw);
+  }
 }
 
 @keyframes slideLeftOut {
-    100% { transform: translate( -100vw ); }
+  100% {
+    transform: translate(-100vw);
+  }
 }
 
 @keyframes slideRightIn {
-    0% { transform: translate( -100vw ); }
+  0% {
+    transform: translate(-100vw);
+  }
 }
 
 @keyframes slideRightOut {
-    100% { transform: translate( 100vw ); }
+  100% {
+    transform: translate(100vw);
+  }
 }
 
 @keyframes fadeOut {
-    70% { 
-        transform: scale( 1.05 );
-    }
-    100% { 
-        transform: scale( 1.05 );
-        opacity: 0; 
-    }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
 }
 
 @keyframes fadeIn {
-    0% { 
-        transform: scale( .9 );
-        opacity: 0; 
-    }
-    30% { 
-        transform: scale( .9 );
-    }
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(0.9);
+  }
 }

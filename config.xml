@@ -8,14 +8,11 @@
     </author>
     <content src="index.html" />
     <platform name="android">
-        <resource-file src="res/android/style.xml" target="app/src/main/res/values/style.xml"/>
-        <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
-            <activity android:theme="@style/Theme.Transparent"></activity>
-        </edit-config>
-        <splash src="res/screen/android/splashscreen.png"/>
-        
         <preference name="android-minSdkVersion" value="24"/>
         <preference name="android-targetSdkVersion" value="32"/>
+
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.xml" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#1b7290" />
     </platform>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
