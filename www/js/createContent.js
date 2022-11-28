@@ -20,7 +20,9 @@ const searchText = () => {
     let inputText = input.value
     list.innerHTML = ''
 
-    let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()))
+    let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()) 
+        || text.content.toLowerCase().includes(inputText.toLowerCase()))
+
     searchedTexts.forEach(text => {
         let name = text.name
 
