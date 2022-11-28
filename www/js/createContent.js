@@ -1,5 +1,4 @@
 import { getCategories, getTitles, getText, typeOfContent, getTexts, addZoomListeners, removeZoomListeners } from './app.js'
-import { getFontSize } from './getsetdata.js'
 import { createDOMElem } from './dominteractions.js'
 
 const updateLocation = (view) => {
@@ -86,7 +85,6 @@ export const createText = () => {
     } else {
         removeZoomListeners(container)
     }
-    container.style.fontSize = getFontSize()
     let categoryName = document.getElementById('categoryName2')
     let text = getText()
 
@@ -102,7 +100,7 @@ export const createText = () => {
             container.innerHTML += `<p class="c-text__text-name">${text[0][0].name}</p>`
         }
     }
-    container.innerHTML += `<div>${text[0][0].content}</div>`
+    container.innerHTML += `<div class="text">${text[0][0].content}</div>`
 }
 
 export const createSearch = () => {

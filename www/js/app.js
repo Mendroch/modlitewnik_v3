@@ -26,6 +26,7 @@ const initializeApp = () => {
     window.setCategoryId = setCategoryId
     window.setTextName = setTextName
     window.undo = undo
+    updateFontSize(fontSize)
 }
 
 const setType = type => contentType = type
@@ -128,7 +129,7 @@ export const getText = () => {
             }
         break
         case 'announcements': return [[announcements]]
-        case 'intentions': return [[intentions]]
+        case 'intentions': console.log([[intentions]]); return [[intentions]]
         case 'carol': return [carol]
         default: texts = undefined; categories = undefined
     }
@@ -154,12 +155,17 @@ export const getTexts = () => {
     }
 }
 
+// Aktualizuje rozmiar czcionki
+const updateFontSize = (size) => {
+    let root = document.documentElement
+    root.style.setProperty("--font-size", size)
+}
+
 // Określa początkowe wartości przy używaniu gestu
 const zoomTouchStart = (e) => {
     if (e.touches.length === 2) {
         e.preventDefault()
         fontSizeStartGesture = fontSize
-        fontSizeInTouchEvent = fontSize
         initialDistance = Math.round(Math.sqrt(Math.pow(e.touches[0].pageX - e.touches[1].pageX, 2)
         + Math.pow(e.touches[0].pageY - e.touches[1].pageY, 2)))
     }
@@ -175,8 +181,7 @@ const zoomTouchMove = (e) => {
         let newfontSize = Math.floor((currentDistance - initialDistance) / 30)
         let fontSize = fontsSize[fontsSize.indexOf(fontSizeStartGesture) + newfontSize]
         if (fontSize !== undefined && fontSize !== fontSizeInTouchEvent) {
-            let text = document.getElementById('text')
-            text.style.fontSize = fontSize
+            updateFontSize(fontSize)
             fontSizeInTouchEvent = fontSize
         }
     }
