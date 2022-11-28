@@ -19,6 +19,7 @@ const searchText = () => {
     let list = document.getElementById('titlesList')
     let inputText = input.value
     list.innerHTML = ''
+    list.scrollTop = 0
 
     let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()) 
         || text.content.toLowerCase().includes(inputText.toLowerCase()))
