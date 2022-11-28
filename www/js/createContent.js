@@ -1,4 +1,4 @@
-import { getCategories, getTitles, getText, typeOfContent, getTexts, addZoomListeners } from './app.js'
+import { getCategories, getTitles, getText, typeOfContent, getTexts, addZoomListeners, removeZoomListeners } from './app.js'
 import { getFontSize } from './getsetdata.js'
 import { createDOMElem } from './dominteractions.js'
 
@@ -81,7 +81,11 @@ export const createTitles = () => {
 export const createText = () => {
     updateLocation()
     let container = document.getElementById('text')
-    addZoomListeners(container)
+    if (typeOfContent() !== 'Kolęda') {
+        addZoomListeners(container)
+    } else {
+        removeZoomListeners(container)
+    }
     container.style.fontSize = getFontSize()
     let categoryName = document.getElementById('categoryName2')
     let text = getText()

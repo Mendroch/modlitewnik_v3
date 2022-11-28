@@ -202,6 +202,18 @@ export const addZoomListeners = (container) => {
     })
 }
 
+export const removeZoomListeners = (container) => {
+    container.removeEventListener('touchstart', e => {
+        zoomTouchStart(e)
+    })
+    container.removeEventListener('touchmove', e => {
+        zoomTouchMove(e)
+    })
+    container.removeEventListener('touchend', e => {
+        zoomTouchEnd(e)
+    })
+}
+
 const undo = () => {
     window.history.back()
 }
