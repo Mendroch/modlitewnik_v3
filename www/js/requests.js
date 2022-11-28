@@ -30,3 +30,6 @@ export const getAnnouncementsRequest = fetch('https://www.parafiaskoczow.ox.pl/a
 
 // Zapytanie do intencji mszy
 export const getIntentionsRequest = fetch('https://www.parafiaskoczow.ox.pl/api/pages/75').then(resp => resp.json())
+
+// Zapytanie do kolędy
+export const getCarolRequest = fetch('https://kmendroch.lk.pl/api/carols').then(resp => resp.json())

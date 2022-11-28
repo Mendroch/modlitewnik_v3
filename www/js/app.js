@@ -1,6 +1,6 @@
 import { getFontSize, setFontSize, getLSData } from './getsetdata.js'
 import { getSongsCategoriesUpdate, getSongsUpdate, getPrayersCategoriesUpdate, 
-    getPrayersUpdate, getLiturgyCategoriesUpdate, getLiturgyUpdate, getAnnouncements, getIntentions } from './updatecontent.js'
+    getPrayersUpdate, getLiturgyCategoriesUpdate, getLiturgyUpdate, getAnnouncements, getIntentions, getCarol } from './updatecontent.js'
 import { getSongsUpdateRequest } from './requests.js'
 
 let songsCategories
@@ -11,6 +11,7 @@ let liturgyCategories
 let liturgy
 let announcements
 let intentions
+let carol
 let fontSize
 let contentType
 let categoryId
@@ -56,6 +57,7 @@ const updateData = () => {
     .then(getLiturgyUpdate)
     .then(getAnnouncements)
     .then(getIntentions)
+    .then(getCarol)
     .then(getCategoriesAndTexts)
     .then(deleteLoadingInfo)
     .catch(err => {
@@ -73,17 +75,18 @@ const getCategoriesAndTexts = () => {
     liturgy = getLSData('liturgy')
     announcements = getLSData('announcements')
     intentions = getLSData('intentions')
+    carol = getLSData('carol')
     fontSize = getFontSize()
 }
 
 const createLoadingInfo = () => {
-    if (!localStorage.getItem('intentions')) {
+    if (!localStorage.getItem('carol')) {
         document.getElementById('loadingInfo').classList.remove('h-display-none')
     }
 }
 
 const deleteLoadingInfo = () => {
-    if (localStorage.getItem('intentions')) {
+    if (localStorage.getItem('carol')) {
         document.getElementById('loadingInfo').classList.add('h-display-none')
     }
 }
@@ -126,6 +129,7 @@ export const getText = () => {
         break
         case 'announcements': return [[announcements]]
         case 'intentions': return [[intentions]]
+        case 'carol': return [carol]
         default: texts = undefined; categories = undefined
     }
     let category = texts.filter(text => text.name === textName)
@@ -139,6 +143,7 @@ export const typeOfContent = () => {
         case 'liturgy': return 'Liturgia'
         case 'announcements': return 'Ogłoszenia'
         case 'intentions': return 'Intencje mszalne'
+        case 'carol': return 'Kolęda'
     }
 }
 

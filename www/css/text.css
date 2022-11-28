@@ -1,20 +1,21 @@
 .c-text__text-name {
-    margin: 3px 0 11px 0;
-    font-size: 17px;
-    font-weight: 600;
+  margin: 3px 0 11px 0;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .c-text-container {
-    padding: 12px 17px;
-    height: calc(100vh - 116px);
-    background-color: var(--white);
-    border-radius: 0 0 8px 8px;
-    font-size: 19px;
-    line-height: 1.2;
-    overflow-y: scroll;
+  position: relative;
+  padding: 12px 17px;
+  height: calc(100vh - 116px);
+  background-color: var(--white);
+  border-radius: 0 0 8px 8px;
+  font-size: 19px;
+  line-height: 1.2;
+  overflow-y: scroll;
 }
 
 .is-text--no-category {
-    height: calc(100vh - 79px);
-    border-radius: 8px;
+  height: calc(100vh - 79px);
+  border-radius: 8px;
 }

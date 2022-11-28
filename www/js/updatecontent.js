@@ -1,7 +1,7 @@
 import {getSongsCategoriesRequest, getSongsRequest, getSongsCategoriesUpdateRequest, getSongsUpdateRequest, 
     getPrayersCategoriesRequest, getPrayersRequest, getPrayersCategoriesUpdateRequest, getPrayersUpdateRequest, 
     getLiturgyCategoriesRequest, getLiturgyRequest, getLiturgyCategoriesUpdateRequest, getLiturgyUpdateRequest,
-    getAnnouncementsRequest, getIntentionsRequest
+    getAnnouncementsRequest, getIntentionsRequest, getCarolRequest
 } from "./requests.js"
 import { getLSData } from './getsetdata.js'
 
@@ -25,11 +25,11 @@ export const getSongsCategoriesUpdate = () => {
                     response.sort(sortStr);
                     localStorage.setItem("songsCategories",JSON.stringify(response))
                     resolve()
-                }).catch((reject) => alert(reject))
+                }).catch()
             } else {
                 resolve()
             }
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
@@ -46,11 +46,11 @@ export const getSongsUpdate = () => {
                     response.sort(sortStr);
                     localStorage.setItem("songs",JSON.stringify(response))
                     resolve()
-                }).catch((reject) => alert(reject))
+                }).catch()
             } else {
                 resolve()
             }
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
@@ -67,11 +67,11 @@ export const getPrayersCategoriesUpdate = () => {
                     response.sort(sortStr);
                     localStorage.setItem("prayersCategories",JSON.stringify(response))
                     resolve()
-                }).catch((reject) => alert(reject))
+                }).catch()
             } else {
                 resolve()
             }
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
@@ -88,11 +88,11 @@ export const getPrayersUpdate = () => {
                     response.sort(sortStr);
                     localStorage.setItem("prayers",JSON.stringify(response))
                     resolve()
-                }).catch((reject) => alert(reject))
+                }).catch()
             } else {
                 resolve()
             }
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
@@ -109,11 +109,11 @@ export const getLiturgyCategoriesUpdate = () => {
                     response.sort(sortStr);
                     localStorage.setItem("liturgyCategories",JSON.stringify(response))
                     resolve()
-                }).catch((reject) => alert(reject))
+                }).catch()
             } else {
                 resolve()
             }
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
@@ -130,11 +130,11 @@ export const getLiturgyUpdate = () => {
                     response.sort(sortStr);
                     localStorage.setItem("liturgy",JSON.stringify(response))
                     resolve()
-                }).catch((reject) => alert(reject))
+                }).catch()
             } else {
                 resolve()
             }
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
@@ -144,11 +144,11 @@ export const getAnnouncements = () => {
         getAnnouncementsRequest.then((response) => {
             localStorage.setItem("announcements",JSON.stringify(response))
             resolve()
-        }).catch((reject) => alert(reject))
+        }).catch()
     })
 }
 
-// Aktualizuje intencje
+// Dodaje entery wewnątrz intencji
 const addEnters = (text) => {
     let keyWords = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota']
     for (let keyWord of keyWords) {
@@ -159,11 +159,22 @@ const addEnters = (text) => {
     return text
 }
 
+// Aktualizuje intencje
 export const getIntentions = () => {
     return new Promise((resolve, reject) => {
         getIntentionsRequest.then((response) => {
             localStorage.setItem("intentions",JSON.stringify(addEnters(response)))
             resolve()
         }).catch((reject) => alert(reject))
+    })
+}
+
+// Aktualizuje kolędę
+export const getCarol = () => {
+    return new Promise((resolve, reject) => {
+        getCarolRequest.then((response) => {
+            localStorage.setItem("carol",JSON.stringify(response))
+            resolve()
+        }).catch()
     })
 }

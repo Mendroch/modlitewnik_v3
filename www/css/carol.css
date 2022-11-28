@@ -1,0 +1,49 @@
+.carol {
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+  border: 1px solid var(--black);
+}
+
+.carol__day {
+  display: flex;
+}
+
+.carol__date {
+  width: 24%;
+}
+
+.carol__routes {
+  width: 76%;
+}
+
+.carol__routes__route {
+  display: flex;
+}
+
+.carol__routes__route__on {
+  width: 10%;
+}
+
+.carol__routes__route__hour {
+  width: 19%;
+}
+
+.carol__routes__route__street {
+  width: 71%;
+}
+
+.carol--text {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid var(--black);
+}
+
+.carol--background {
+  background-color: var(--pottery-blue);
+}
+
+.carolTitle {
+  font-size: 16px;
+}
