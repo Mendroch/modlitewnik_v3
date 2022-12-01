@@ -1,111 +1,116 @@
 .c-text__navigation {
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .c-navigation__location {
-    margin-top: 13px;
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 400;
+  margin-top: 13px;
+  position: relative;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .c-navigation__button {
-    margin-right: 15px;
-    height: 25px;
-    width: 25px;
-    background: center / contain no-repeat url("../img/arrow.png");
-    border: none;
+  position: absolute;
+  top: -7.5px;
+  left: -7.5px;
+  height: 40px;
+  width: 40px;
+  background: center / 25px 25px no-repeat url("../img/arrow.png");
+  border: none;
+}
+
+.h-navigation-location {
+  margin-top: 3px;
+  margin-left: 40px;
 }
 
 .c-navigation__menu {
-    margin-top: 12px;
-    height: 24px;
-    width: 24px;
-    background: center / contain no-repeat url("../img/menu.png");
-    border: none;
+  margin-top: 12px;
+  height: 24px;
+  width: 24px;
+  background: center / contain no-repeat url("../img/menu.png");
+  border: none;
 }
 
 .c-text__search {
-    margin-bottom: 26px;
-    display: flex;
-    box-shadow: 0px 0px 22px 0px var(--blue-lagoon);
+  margin-bottom: 26px;
+  display: flex;
+  box-shadow: 0px 0px 22px 0px var(--blue-lagoon);
 }
 
 .c-search__input {
-    padding: 10px;
-    height: 32px;
-    width: calc(100% - 32px);
-    border: none;
-    outline: none;
-    border-radius: 5px 0 0 5px;
+  padding: 10px;
+  height: 32px;
+  width: calc(100% - 32px);
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
 }
 
 .c-search__button {
-    margin-top: 13px;
-    height: 32px;
-    width: 32px;
-    background: url("../img/search.png") center / 20px no-repeat var(--tangerine-yellow);
-    border: none;
-    border-radius: 5px;
+  margin-top: 13px;
+  height: 32px;
+  width: 32px;
+  background: url("../img/search.png") center / 20px no-repeat
+    var(--tangerine-yellow);
+  border: none;
+  border-radius: 5px;
 }
 
 .c-list__elem {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
-    font-size: 16px;
-    line-height: 1.2;
-    border-bottom: 2px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  font-size: 16px;
+  line-height: 1.2;
+  border-bottom: 2px solid var(--light-gray);
 }
 
 .c-list__elem:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .c-no-results {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .c-list {
-    position: relative;
-    padding: 5px 17px;
-    height: calc(100vh - 124px);
-    background-color: var(--white);
-    border-radius: 0 0 8px 8px;
-    font-size: 19px;
-    overflow-y: scroll;
+  position: relative;
+  padding: 5px 17px;
+  height: calc(100vh - 124px);
+  background-color: var(--white);
+  border-radius: 0 0 8px 8px;
+  font-size: 19px;
+  overflow-y: scroll;
 }
 
 .c-text__category-name {
-    padding: 7px 17px;
-    height: 37px;
-    border-radius: 8px 8px 0 0;
-    font-size: 19px;
-    font-weight: 500;
-    color: var(--white);
-    background-color: var(--blue-lagoon);
-    overflow: scroll;
-    white-space: nowrap;
+  padding: 7px 17px;
+  height: 37px;
+  border-radius: 8px 8px 0 0;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--blue-lagoon);
+  overflow: scroll;
+  white-space: nowrap;
 }
 
 .is-liturgy__list {
-    height: calc(100vh - 117px);
+  height: calc(100vh - 117px);
 }
 
-.styled-scrollbars::-webkit-scrollbar
-{
-    width: 5px;
+.styled-scrollbars::-webkit-scrollbar {
+  width: 5px;
 }
 
-.styled-scrollbars::-webkit-scrollbar-thumb
-{
-    background-color: var(--light-gray)
+.styled-scrollbars::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray);
 }
