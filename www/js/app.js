@@ -129,7 +129,7 @@ export const getText = () => {
             }
         break
         case 'announcements': return [[announcements]]
-        case 'intentions': console.log([[intentions]]); return [[intentions]]
+        case 'intentions': return [[intentions]]
         case 'carol': return [carol]
         default: texts = undefined; categories = undefined
     }

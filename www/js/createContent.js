@@ -24,6 +24,12 @@ const searchText = () => {
     let searchedTexts = texts.filter(text => text.name.toLowerCase().includes(inputText.toLowerCase()) 
         || text.content.toLowerCase().includes(inputText.toLowerCase()))
 
+    searchedTexts.sort((a, b) => {
+        if(a.name.toLowerCase().includes(inputText.toLowerCase()) === true && b.name.toLowerCase().includes(inputText.toLowerCase()) === false) return -1
+        else if(a.name.toLowerCase().includes(inputText.toLowerCase()) === false && b.name.toLowerCase().includes(inputText.toLowerCase()) === true) return 1
+        else return 0
+    })
+
     searchedTexts.forEach(text => {
         let name = text.name
 
