@@ -6,7 +6,7 @@
       "alias": "parafiaskoczow",
       "password" : "9ORxCak9Ylep7u8jGkTm",
       "keystoreType": "jks",
-      "packageType": "apk"
+      "packageType": "bundle"
     }
   }
 }
